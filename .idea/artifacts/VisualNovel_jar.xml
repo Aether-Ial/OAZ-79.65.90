@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="VisualNovel:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/VisualNovel_jar</output-path>
+    <root id="archive" name="VisualNovel.jar">
+      <element id="module-output" name="VisualNovel" />
+    </root>
+  </artifact>
+</component>
