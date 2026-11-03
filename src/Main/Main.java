@@ -6,6 +6,8 @@ import javax.swing.ImageIcon;
 import java.awt.Graphics;
 import java.awt.Image;
 
+// Hello. If you are reading this, then you have stumbled upon the Visual Novel in its early hardcoded stages. If not, then, hey, I finally implemented the systems I wanted to implement.
+
 class OpenImage extends JFrame {
     public OpenImage(String imagePath) {
         java.net.URL url = OpenImage.class.getResource(imagePath);
