@@ -1,12 +1,14 @@
-package Main;
+package main;
 import story.Chapter1;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.ImageIcon;
 import java.awt.Graphics;
 import java.awt.Image;
-
-// Hello. If you are reading this, then you have stumbled upon the Visual Novel in its early hardcoded stages. If not, then, hey, I finally implemented the systems I wanted to implement.
+import com.google.gson.Gson;
+import lib.Line;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 
 class OpenImage extends JFrame {
     public OpenImage(String imagePath) {
@@ -31,8 +33,16 @@ class OpenImage extends JFrame {
     }
 }
 public class Main {
-    public static void main (String [] args) throws InterruptedException {
-        new OpenImage("/Assets/AE341.jpg");
-        Chapter1.choiceOne();
+    public static void main(String[] args) throws InterruptedException {
+        new OpenImage("/assets/AE341.jpg");
+        InputStream stream = Main.class.getResourceAsStream("/data/data.json");
+        Line[] lines = new Gson().fromJson(new InputStreamReader(stream), Line[].class);
+
+        for (Line l : lines) {
+            System.out.println(l.text);
+            if (l.delay > 0) {
+                Thread.sleep(l.delay);
+            }
+        }
     }
 }

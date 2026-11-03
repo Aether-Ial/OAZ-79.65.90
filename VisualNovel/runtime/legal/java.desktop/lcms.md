@@ -42,7 +42,7 @@ Users of this code must verify correctness for their application.
 ### AUTHORS File Information
 ```
 
-Main Author
+main Author
 ------------
 Marti Maria
 

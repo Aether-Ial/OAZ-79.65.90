@@ -1,6 +1,6 @@
 package story;
 import java.util.Scanner;
-import Assets.line;
+import assets.line;
 
 public class Chapter1 {
     public static void choiceOne () throws InterruptedException {
